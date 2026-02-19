@@ -1,0 +1,92 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import GeminiImage from '../../../components/GeminiImage';
+import SEO from '../../../components/SEO';
+
+const ProgrammaticSEO: React.FC = () => {
+  return (
+    <main className="bg-white text-slate-900">
+      <SEO 
+        title="Programmatic SEO & Large-Scale Authority Vancouver"
+        description="Engineering large-scale visibility assets using programmatic logic and entity mapping for Vancouver based organizations. Scale your reach."
+        path="/services/programmatic-seo"
+        serviceName="Programmatic SEO"
+      />
+      <section className="bg-slate-900 text-white py-32 lg:py-48 border-b border-slate-800 relative overflow-hidden">
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl lg:text-7xl font-black tracking-tighter mb-8 leading-none">
+                Algorithmic <br/><span className="text-[#FF6B00]">Scale Strategy.</span>
+              </h1>
+              <p className="text-xl lg:text-2xl text-slate-400 leading-relaxed mb-12">
+                Engineering large-scale visibility assets using programmatic logic, entity mapping, and LSI keyword orchestration.
+              </p>
+              <Link to="/contact" className="inline-flex h-14 items-center bg-[#FF6B00] px-10 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-slate-900 transition-all">
+                Get a review video
+              </Link>
+            </div>
+            <div className="hidden lg:block aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+              <GeminiImage 
+                prompt="Infinite digital grid extending into the horizon, glowing orange data points representing scale, high-velocity data flow" 
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2) Pain-to-light bridge */}
+      <section className="py-24 lg:py-32 border-b border-slate-50">
+        <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
+          <h2 className="text-sm font-bold uppercase tracking-[0.4em] text-[#FF6B00] mb-8">The Scale Problem</h2>
+          <p className="text-3xl lg:text-4xl font-black text-slate-900 tracking-tight leading-tight mb-8">
+            Most businesses come to us when they reach the limits of manual content production.
+          </p>
+          <div className="text-lg text-slate-600 space-y-6 leading-relaxed">
+            <p>
+              Programmatic SEO isn't about spam; it's about database-driven utility. We build thousands of high-value, intent-specific landing hubs that provide real data to specific user queries.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3) Mechanism */}
+      <section className="bg-slate-50 py-24 border-b border-slate-100">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl font-black tracking-tighter text-slate-900 mb-8">Entity & LSI Logic</h2>
+              <ul className="space-y-6">
+                <li className="flex gap-4 items-start">
+                  <span className="w-1.5 h-6 bg-[#FF6B00] shrink-0"></span>
+                  <div>
+                    <strong className="block text-slate-900 text-sm uppercase tracking-widest mb-1">Latent Semantic Indexing</strong>
+                    <p className="text-slate-500 text-sm">Hard-wiring the relationships between entities to ensure your site is a topical node.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
+              <GeminiImage 
+                prompt="Abstract representation of database nodes and entity relationships, clean lines, professional technology visualization" 
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-slate-900 text-white py-32 text-center border-t border-slate-800">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter">Dominate every <span className="text-[#FF6B00]">Long-Tail query.</span></h2>
+          <Link to="/contact" className="inline-flex h-16 items-center bg-[#FF6B00] px-12 text-sm font-bold uppercase tracking-widest text-white hover:bg-white hover:text-slate-900 transition-all">
+            Get a review video
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default ProgrammaticSEO;
