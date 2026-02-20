@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GeminiImage from '../../../components/GeminiImage';
 import SEO from '../../../components/SEO';
 
 const AICalling: React.FC = () => {
@@ -12,6 +11,7 @@ const AICalling: React.FC = () => {
         path="/services/ai-calling"
         serviceName="AI Calling"
       />
+
       {/* 1) Hero */}
       <section className="bg-slate-900 text-white py-32 lg:py-48 border-b border-slate-800 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -32,10 +32,14 @@ const AICalling: React.FC = () => {
                 </p>
               </div>
             </div>
+
+            {/* Static hero image */}
             <div className="hidden lg:block aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-              <GeminiImage 
-                prompt="Futuristic voice assistant waveform, sleek dark background with orange glowing pulses, high-end technology aesthetic" 
-                className="w-full h-full"
+              <img
+                src="/images/ai-calling-hero.jpg"
+                alt="Autonomous voice orchestration"
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -83,10 +87,14 @@ const AICalling: React.FC = () => {
                 </li>
               </ul>
             </div>
+
+            {/* Static mechanism image */}
             <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
-              <GeminiImage 
-                prompt="Macro of a high-end microphone in a dark professional studio, glowing audio interface buttons, shallow depth of field" 
-                className="w-full h-full"
+              <img
+                src="/images/ai-calling-mic.jpg"
+                alt="Professional microphone studio"
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -96,7 +104,9 @@ const AICalling: React.FC = () => {
       {/* Final CTA */}
       <section className="bg-slate-900 text-white py-32 text-center border-t border-slate-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter">Your phone is <span className="text-[#FF6B00]">losing you money.</span></h2>
+          <h2 className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter">
+            Your phone is <span className="text-[#FF6B00]">losing you money.</span>
+          </h2>
           <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Send me your current sales script. I'll record a technical audit of your call logic and show you exactly how AI assisted calling can scale your qualification process.
           </p>
