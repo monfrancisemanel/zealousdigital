@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GeminiImage from '../../components/GeminiImage';
 import SEO from '../../components/SEO';
 
 const AppEngineering: React.FC = () => {
@@ -24,10 +23,13 @@ const AppEngineering: React.FC = () => {
         serviceName="App Engineering"
         faqJson={faqs}
       />
+
       <section className="bg-slate-900 text-white py-32">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl">
-            <h1 className="text-6xl font-black tracking-tighter mb-8 leading-none">App <br/><span className="text-[#FF6B00]">Engineering.</span></h1>
+            <h1 className="text-6xl font-black tracking-tighter mb-8 leading-none">
+              App <br/><span className="text-[#FF6B00]">Engineering.</span>
+            </h1>
             <p className="text-xl text-slate-400 leading-relaxed">
               Bespoke software and SaaS development for enterprise logic and scale.
             </p>
@@ -40,25 +42,41 @@ const AppEngineering: React.FC = () => {
           <div>
             <h2 className="text-4xl font-bold text-slate-900 mb-8 tracking-tight">Utility as a Strategy.</h2>
             <div className="space-y-6 text-slate-600 leading-relaxed text-lg">
-              <p>We build software that solves business problems. Whether it's a customer portal, a custom SaaS product, or a complex internal dashboard, we engineer for longevity and speed.</p>
-              <p>Our stack is modern, our code is clean, and our focus is exclusively on high-utility outcomes.</p>
+              <p>
+                We build software that solves business problems. Whether it's a customer portal, a custom SaaS product, or a complex internal dashboard, we engineer for longevity and speed.
+              </p>
+              <p>
+                Our stack is modern, our code is clean, and our focus is exclusively on high-utility outcomes.
+              </p>
             </div>
+
             <div className="mt-12 space-y-4">
               {faqs.map((faq, i) => (
                 <details key={i} className="group border-b border-slate-100 py-4">
                   <summary className="flex items-center justify-between cursor-pointer font-bold text-slate-900 uppercase tracking-widest text-xs">
                     {faq.question}
-                    <svg className="w-4 h-4 text-[#FF6B00] transition group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7"/></svg>
+                    <svg
+                      className="w-4 h-4 text-[#FF6B00] transition group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7" />
+                    </svg>
                   </summary>
                   <p className="mt-4 text-slate-500 text-sm leading-relaxed">{faq.answer}</p>
                 </details>
               ))}
             </div>
           </div>
+
+          {/* Static image */}
           <div className="aspect-square rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
-            <GeminiImage 
-              prompt="Professional software engineering environment, dual monitors showing complex code, mechanical keyboard, dark aesthetic with orange backlight" 
-              className="w-full h-full"
+            <img
+              src="/images/app-engineering.jpg"
+              alt="Software engineering workspace"
+              className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
         </div>
