@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GeminiImage from '../../../components/GeminiImage';
 import SEO from '../../../components/SEO';
 
 const ContentEngine: React.FC = () => {
@@ -12,6 +11,7 @@ const ContentEngine: React.FC = () => {
         path="/services/content-engine"
         serviceName="Content Engine"
       />
+
       <section className="bg-slate-900 text-white py-32 lg:py-48 border-b border-slate-800 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -22,14 +22,21 @@ const ContentEngine: React.FC = () => {
               <p className="text-xl lg:text-2xl text-slate-400 leading-relaxed mb-12">
                 Engineering query-based content systems that satisfy EEAT requirements and dominate generative search citations.
               </p>
-              <Link to="/contact" className="inline-flex h-14 items-center bg-[#FF6B00] px-10 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-slate-900 transition-all">
+              <Link
+                to="/contact"
+                className="inline-flex h-14 items-center bg-[#FF6B00] px-10 text-xs font-bold uppercase tracking-[0.2em] text-white hover:bg-white hover:text-slate-900 transition-all"
+              >
                 Get a review video
               </Link>
             </div>
+
+            {/* Static hero image */}
             <div className="hidden lg:block aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-              <GeminiImage 
-                prompt="Modern editorial workspace, minimalist desk with a mechanical keyboard and high-end monitor, soft morning light, focus on professional writing environment" 
-                className="w-full h-full"
+              <img
+                src="/images/content-hero.jpg"
+                alt="Editorial workspace and content production"
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -54,12 +61,16 @@ const ContentEngine: React.FC = () => {
       <section className="bg-slate-50 py-24 border-b border-slate-100">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Static mechanism image */}
             <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
-              <GeminiImage 
-                prompt="Abstract representation of EEAT trust signals, glowing nodes forming a shield shape, technical authority aesthetic" 
-                className="w-full h-full"
+              <img
+                src="/images/content-eeat.jpg"
+                alt="EEAT trust signals and authority"
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
+
             <div>
               <h2 className="text-3xl font-black tracking-tighter text-slate-900 mb-8">EEAT Deployment</h2>
               <ul className="space-y-6">
@@ -67,7 +78,9 @@ const ContentEngine: React.FC = () => {
                   <span className="w-1.5 h-6 bg-[#FF6B00] shrink-0"></span>
                   <div>
                     <strong className="block text-slate-900 text-sm uppercase tracking-widest mb-1">Query-Based Architecture</strong>
-                    <p className="text-slate-500 text-sm">Content engineered specifically to answer the intent of high-value enterprise queries.</p>
+                    <p className="text-slate-500 text-sm">
+                      Content engineered specifically to answer the intent of high-value enterprise queries.
+                    </p>
                   </div>
                 </li>
               </ul>
@@ -78,7 +91,9 @@ const ContentEngine: React.FC = () => {
 
       <section className="bg-slate-900 text-white py-32 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter">Be the <span className="text-[#FF6B00]">Authoritative Answer.</span></h2>
+          <h2 className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter">
+            Be the <span className="text-[#FF6B00]">Authoritative Answer.</span>
+          </h2>
           <Link to="/contact" className="inline-flex h-16 items-center bg-[#FF6B00] px-12 text-sm font-bold uppercase tracking-widest text-white hover:bg-white hover:text-slate-900 transition-all">
             Get a review video
           </Link>
