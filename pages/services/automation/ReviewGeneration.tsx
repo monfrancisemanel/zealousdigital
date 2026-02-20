@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GeminiImage from '../../../components/GeminiImage';
 import SEO from '../../../components/SEO';
 
 const ReviewGeneration: React.FC = () => {
@@ -12,6 +11,7 @@ const ReviewGeneration: React.FC = () => {
         path="/services/review-generation"
         serviceName="Review Generation"
       />
+
       {/* 1) Hero */}
       <section className="bg-slate-900 text-white py-32 lg:py-48 border-b border-slate-800 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -32,10 +32,14 @@ const ReviewGeneration: React.FC = () => {
                 </p>
               </div>
             </div>
+
+            {/* Static hero image */}
             <div className="hidden lg:block aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-              <GeminiImage 
-                prompt="Five star ratings appearing on a sleek smartphone screen, glowing orange accents, macro photography" 
-                className="w-full h-full"
+              <img
+                src="/images/reviews-hero.jpg"
+                alt="Five-star ratings on a smartphone"
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -64,12 +68,16 @@ const ReviewGeneration: React.FC = () => {
       <section className="bg-slate-50 py-24 border-b border-slate-100">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Static mechanism image */}
             <div className="aspect-video order-2 lg:order-1 rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
-               <GeminiImage 
-                prompt="Abstract digital network showing trust signals and social proof nodes, glowing orange and white" 
-                className="w-full h-full"
-               />
+              <img
+                src="/images/reviews-network.jpg"
+                alt="Trust signals and social proof network"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
             </div>
+
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl font-black tracking-tighter text-slate-900 mb-8">Reputation Scaling Logic</h2>
               <ul className="space-y-6">
@@ -96,7 +104,9 @@ const ReviewGeneration: React.FC = () => {
       {/* Final CTA */}
       <section className="bg-slate-900 text-white py-32 text-center border-t border-slate-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter">Your reputation is <span className="text-[#FF6B00]">stagnant.</span></h2>
+          <h2 className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter">
+            Your reputation is <span className="text-[#FF6B00]">stagnant.</span>
+          </h2>
           <p className="text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
             Send me your Google Business Profile URL. I'll record a technical audit of your review velocity and show you exactly how your competitors are out-ranking you through social proof.
           </p>
