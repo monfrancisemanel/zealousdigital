@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import GeminiImage from '../../../components/GeminiImage';
 import SEO from '../../../components/SEO';
 
 const TechnicalSEO: React.FC = () => {
@@ -12,6 +11,7 @@ const TechnicalSEO: React.FC = () => {
         path="/services/technical-seo"
         serviceName="Technical SEO"
       />
+
       <section className="bg-slate-900 text-white py-32 lg:py-48 border-b border-slate-800 relative overflow-hidden">
         <div className="container mx-auto px-4 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -26,10 +26,14 @@ const TechnicalSEO: React.FC = () => {
                 Get a review video
               </Link>
             </div>
+
+            {/* Static hero image */}
             <div className="hidden lg:block aspect-video rounded-2xl overflow-hidden shadow-2xl border border-white/10">
-              <GeminiImage 
-                prompt="Data center server racks with glowing blue and orange lights, technical infrastructure, extreme detail, cinematic lighting" 
-                className="w-full h-full"
+              <img
+                src="/images/technical-seo-hero.jpg"
+                alt="Technical infrastructure and edge delivery"
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -67,10 +71,14 @@ const TechnicalSEO: React.FC = () => {
                 </li>
               </ul>
             </div>
+
+            {/* Static mechanism image */}
             <div className="aspect-video rounded-2xl overflow-hidden shadow-2xl border border-slate-100">
-              <GeminiImage 
-                prompt="Abstract representation of digital pruning, clean code structure, glowing path logic" 
-                className="w-full h-full"
+              <img
+                src="/images/technical-seo-mechanism.jpg"
+                alt="Clean code structure and crawl logic"
+                className="w-full h-full object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -79,7 +87,9 @@ const TechnicalSEO: React.FC = () => {
 
       <section className="bg-slate-900 text-white py-32 text-center border-t border-slate-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter">Your foundation is <span className="text-[#FF6B00]">leaking.</span></h2>
+          <h2 className="text-4xl lg:text-6xl font-black mb-8 tracking-tighter">
+            Your foundation is <span className="text-[#FF6B00]">leaking.</span>
+          </h2>
           <Link to="/contact" className="inline-flex h-16 items-center bg-[#FF6B00] px-12 text-sm font-bold uppercase tracking-widest text-white hover:bg-white hover:text-slate-900 transition-all">
             Get a review video
           </Link>
